@@ -1,0 +1,3 @@
+[submodule "gpio2kbd"]
+	path = gpio2kbd
+	url = https://github.com/opencardev/gpio2kbd.git

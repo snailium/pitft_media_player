@@ -15,3 +15,11 @@ sudo pip install ${PIP_PKGS}
 # Patch /etc/modules
 # Add the following line
 #uinput
+
+# install gpio2kbd (fork of adafruit/retrogame)
+# Website: https://github.com/opencardev/gpio2kbd
+git submodule update --init
+cd gpio2kbd
+make && sudo make install
+cd ..
+sudo cp gpio2kbd.cfg /boot/
