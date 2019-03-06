@@ -41,7 +41,7 @@ for pin in keymap.keys():
     GPIO.add_event_detect(pin, GPIO.FALLING, callback=my_callback, bouncetime=200)
 
 try:
-    sleep(30)         # wait 30 seconds
+    sleep(300)         # wait 30 seconds
     print ("Time's up. Finished!")
 
 finally:                   # this block will run no matter how the try block exits

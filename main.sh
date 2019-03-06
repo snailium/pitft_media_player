@@ -34,10 +34,10 @@ function list_media {
   dialog --clear \
   --backtitle "Ultra Super Media Management" \
   --cancel-label "Exit" \
-  --no-tags --no-shadow \
+  --no-tags --no-shadow --no-lines \
   ${DEFAULT_ITEM} \
   --title "[ VIDEO PLAYER ]" \
-  --menu "${MEDIA_DIR}" 25 40 20 \
+  --menu "${MEDIA_DIR}" 15 40 15 \
   ${DIR_LIST} 2>"${SELECTION}"
 
 
