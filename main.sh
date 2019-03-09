@@ -57,7 +57,7 @@ function list_media {
       ITEM=${DIR_WORKING}/${RESULT}
       echo ${ITEM}
       if [ -f "${ITEM}" ]; then
-        omxplayer -o hdmi ${ITEM}
+        omxplayer -o hdmi --key-config ~/omxplayer.key ${ITEM}
         MENU_DEFAULT=${RESULT}
         list_media
       fi

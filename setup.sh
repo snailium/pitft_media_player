@@ -23,3 +23,19 @@ cd gpio2kbd
 make && sudo make install
 cd ..
 sudo cp gpio2kbd.cfg /boot/
+
+# Patch /etc/rc.local
+#/usr/local/bin/gpio2kbd &
+
+# Prepare omxplayer key binding file
+ln -s omxplayer.key ~/
+
+# Patch ~/.bashrc
+#if [ -z $SSH_TTY ]; then
+#  /home/pi/pitft_media_player/main.sh
+#fi
+
+# Enable autologin
+
+echo Installation finished.
+echo Now reboot your Pi.
