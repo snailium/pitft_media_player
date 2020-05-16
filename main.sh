@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPT_DIR=`dirname $0`
+
 MEDIA_ROOT=~/Media
 MEDIA_DIR=.
 
@@ -57,7 +59,7 @@ function list_media {
       ITEM=${DIR_WORKING}/${RESULT}
       echo ${ITEM}
       if [ -f "${ITEM}" ]; then
-        omxplayer -o hdmi --key-config ~/omxplayer.key ${ITEM}
+        omxplayer -o hdmi --key-config ${SCRIPT_DIR}/omxplayer.key ${ITEM}
         MENU_DEFAULT=${RESULT}
         list_media
       fi
